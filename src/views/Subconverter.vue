@@ -1350,6 +1350,9 @@ export default {
           })
     },
     getBackendVersion() {
+      if (this.form.customBackend === "https://psub.xyz233.cf") {
+    this.form.customBackend = "https://api.v1.mk";
+  }
       this.$axios
           .get(
               this.form.customBackend + "/version"
