@@ -1006,7 +1006,7 @@ export default {
       window.open(downld);
     },
     gotoBasicVideo() {
-      this.$alert("别忘了关注友善的肥羊哦！", {
+      this.$alert("感谢您的使用！", {
         type: "warning",
         confirmButtonText: '确定',
         customClass: 'msgbox',
@@ -1017,7 +1017,7 @@ export default {
           });
     },
     gotoAdvancedVideo() {
-      this.$alert("别忘了关注友善的肥羊哦！", {
+      this.$alert("感谢您的使用！", {
         type: "warning",
         confirmButtonText: '确定',
         customClass: 'msgbox',
