@@ -989,16 +989,16 @@ export default {
     tanchuang() {
   this.$alert(`<div style="text-align:center;font-size:15px">
     <strong><span style="font-size:20px">重要提示：</span></strong></br>
-    <span style="font-size:15px">本站所有后端均利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题。</span></br>
-    <strong><span style="font-size:20px">欢迎使用全网最漂亮的订阅转换工具！</span></strong></br>
-    <strong><span style="font-size:20px">支持暗黑模式，Clash, Quantumult X, Surge, Shadowrocket等多种订阅转换工具。</span></strong></br>
-    <strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://xyz233.cf" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong>
+    <span style="font-size:20px">本站所有后端均利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题。</span></br>
+    <strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://xyz233.cf" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong></br>
+    <strong><span style="font-size:15px">欢迎使用全网最漂亮的订阅转换工具！</span></strong></br>
+    <strong><span style="font-size:15px">支持暗黑模式，Clash, Quantumult X, Surge, Shadowrocket等多种订阅转换工具。</span></strong>
   </div>`, '信息面板', {
     confirmButtonText: '确定',
     dangerouslyUseHTMLString: true,
     customClass: 'msgbox'
   });
-}
+}，
     onCopy() {
       this.$message.success("已复制");
     },
