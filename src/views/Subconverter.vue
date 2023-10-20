@@ -1363,17 +1363,20 @@ export default {
             this.backendVersion = res.data.replace(/backend\n$/gm, "");
             this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
             let a = this.form.customBackend.indexOf("api.v1.mk") !== -1 || this.form.customBackend.indexOf("sub.d1.mk") !== -1 || this.form.customBackend === "psub.xyz233.cf";
+            console.log("a后面的customBackend = " + this.form.customBackend);
             let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
             a ? this.$message.success(`${this.backendVersion}` + "默认后端利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
           })
           .catch(() => {
             this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
           });
+      console.log("版本获取后customBackend = " + this.form.customBackend);
       if (flag === -1) {
         // 如果flag为-1，将customBackend改回"https://psub.xyz233.cf"，并将flag重新设置为0
         this.form.customBackend = "https://psub.xyz233.cf";
         flag = 0;
       }
+      console.log("flag归位后customBackend = " + this.form.customBackend);
     }
   }
 };
