@@ -1373,6 +1373,7 @@ export default {
         // 如果flag为-1，将customBackend改回"https://psub.xyz233.cf"，并将flag重新设置为0
         this.form.customBackend = "https://psub.xyz233.cf";
         flag = 0;
+      }
     }
   }
 };
