@@ -449,9 +449,14 @@ export default {
         },
         customBackend: {
           "随机化安全增强型后端": "https://psub.xyz233.cf",
+          "品云后端（无加密，仅备用）": "https://sub.id9.cc",
+          "国内优化后端（无加密，仅备用）": "https://api.tsutsu.one",
+            
         },
         backendOptions: [
           {value: "https://psub.xyz233.cf"},
+          {value: "https://sub.id9.cc"},
+          {value: "https://api.tsutsu.one"},
         ],
         remoteConfig: [
           {
@@ -853,7 +858,7 @@ export default {
         clientType: "",
         customBackend: this.getUrlParam() == "" ? "https://psub.xyz233.cf" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini",
+        remoteConfig: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
