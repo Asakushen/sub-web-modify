@@ -179,8 +179,8 @@
                 <el-button
                     type="zhuti"
                     @click="change">
-                  <i id="rijian" class="el-icon-sunny"></i>
                   <i id="yejian" class="el-icon-moon"></i>
+                  <i id="rijian" class="el-icon-sunny"></i>
                 </el-button>
               </el-divider>
               <el-form-item label="定制订阅:">
