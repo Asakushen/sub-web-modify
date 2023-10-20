@@ -454,34 +454,22 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
-          "肥羊增强型后端【vless+hysteria】": "https://api.v1.mk",
-          "肥羊备用后端【vless+hysteria】": "https://sub.d1.mk",
-          "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
-          nameless13提供: "https://www.nameless13.com",
-          subconverter作者提供: "https://sub.xeton.dev",
-          "sub-web作者提供": "https://api.wcc.best",
-          "sub作者&lhie1提供": "https://api.dler.io",
+          "随机化安全增强型后端": "https://psub.xyz233.cf",
         },
         backendOptions: [
-          {value: "https://api.v1.mk"},
-          {value: "https://sub.d1.mk"},
-          {value: "https://api.tsutsu.one"},
-          {value: "https://www.nameless13.com"},
-          {value: "https://sub.xeton.dev"},
-          {value: "https://api.wcc.best"},
-          {value: "https://api.dler.io"},
+          {value: "https://psub.xyz233.cf"},
         ],
         remoteConfig: [
           {
             label: "通用",
             options: [
               {
-                label: "默认",
-                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
+                label: "自用（个性化太多不适合任何人！！请切换）",
+                value: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini"
               },
               {
-                label: "默认（自动测速）",
-                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
+                label: "自用fakeip（完全自用 不适合任何人！！！请切换）",
+                value: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/FakeipRule.ini"
               },
               {
                 label: "默认（索尼电视专用）",
