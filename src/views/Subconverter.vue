@@ -987,7 +987,7 @@ export default {
       }
     },
     tanchuang() {
-  this.$alert(`<div style="text-align:center;font-size:15px"><strong><span style="font-size:20px">欢迎使用全网最漂亮的订阅转换工具！</span></strong></br><strong><span style="font-size:20px">支持暗黑模式，Clash, Quantumult X, Surge, Shadowrocket等多种订阅转换工具。</span></strong></br><strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://xyz233.cf" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong></div>`, '信息面板', {
+  this.$alert(`<div style="text-align:center;font-size:15px"><strong><span style="font-size:20px">欢迎使用全网最漂亮的订阅转换工具！</span></strong></br><strong><span style="font-size:20px">支持暗黑模式，Clash, Quantumult X, Surge, Shadowrocket等多种订阅转换工具，利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题。</span></strong></br><strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://xyz233.cf" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong></div>`, '信息面板', {
     confirmButtonText: '确定',
     dangerouslyUseHTMLString: true,
     customClass: 'msgbox'
@@ -1371,7 +1371,7 @@ export default {
             this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
             let a = this.form.customBackend.indexOf("api.v1.mk") !== -1 || this.form.customBackend.indexOf("sub.d1.mk") !== -1;
             let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
-            a ? this.$message.success(`${this.backendVersion}` + "肥羊负载均衡增强版后端，已屏蔽免费节点池（会返回403），额外支持vless+hysteria订阅转换") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
+            a ? this.$message.success(`${this.backendVersion}` + "默认后端利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
           })
           .catch(() => {
             this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
