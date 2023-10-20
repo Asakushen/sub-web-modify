@@ -1350,8 +1350,10 @@ export default {
           })
     },
     getBackendVersion() {
+      let flag = 0;
       if (this.form.customBackend === "https://psub.xyz233.cf") {
     this.form.customBackend = "https://api.v1.mk";
+    flag = -1; // 如果customBackend被修改，将flag设置为-1
   }
       this.$axios
           .get(
@@ -1367,6 +1369,10 @@ export default {
           .catch(() => {
             this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
           });
+      if (flag === -1) {
+        // 如果flag为-1，将customBackend改回"https://psub.xyz233.cf"，并将flag重新设置为0
+        this.form.customBackend = "https://psub.xyz233.cf";
+        flag = 0;
     }
   }
 };
