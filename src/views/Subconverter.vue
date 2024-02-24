@@ -448,13 +448,13 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
-          "随机化安全增强型后端": "https://psub.xyz233.cf",
+          "随机化安全增强型后端": "https://psub.chillg.top",
           "品云后端（无加密，仅备用）": "https://sub.id9.cc",
           "国内优化后端（无加密，仅备用）": "https://api.tsutsu.one",
             
         },
         backendOptions: [
-          {value: "https://psub.xyz233.cf"},
+          {value: "https://psub.chillg.top"},
           {value: "https://sub.id9.cc"},
           {value: "https://api.tsutsu.one"},
         ],
@@ -856,7 +856,7 @@ export default {
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? "https://psub.xyz233.cf" : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? "https://psub.chillg.top" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
         remoteConfig: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini",
         excludeRemarks: "",
@@ -977,7 +977,7 @@ export default {
   this.$alert(`<div style="text-align:center;font-size:15px">
     <strong><span style="font-size:20px">重要提示：</span></strong></br>
     <span style="font-size:20px">本站所有后端均利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题。</span></br>
-    <strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://xyz233.cf" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong></br>
+    <strong><span style="font-size:20px">访问作者博客：</span><span><a href="https://chillg.top" target="_blank" style="color:blue;font-size:20px;text-decoration:none">点击访问</a></span></strong></br>
      <strong><span style="font-size:15px">欢迎使用全网最漂亮的订阅转换工具！</span></strong></br>
     <strong><span style="font-size:15px">支持暗黑模式，Clash, Quantumult X, Surge, Shadowrocket等多种订阅转换工具。</span></strong></br>
   </div>`, '信息面板', {
@@ -1356,7 +1356,7 @@ export default {
     },
     getBackendVersion() {
       let flag = 0;
-      if (this.form.customBackend === "https://psub.xyz233.cf") {
+      if (this.form.customBackend === "https://psub.chillg.top") {
     this.form.customBackend = "https://api.v1.mk";
     flag = -1; // 如果customBackend被修改，将flag设置为-1
     console.log("标志位改变后customBackend = " + this.form.customBackend);
@@ -1368,7 +1368,7 @@ export default {
           .then(res => {
             this.backendVersion = res.data.replace(/backend\n$/gm, "");
             this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
-            let a = this.form.customBackend.indexOf("https://psub.xyz233.cf") !== -1;
+            let a = this.form.customBackend.indexOf("https://psub.chillg.top") !== -1;
             console.log("a后面的customBackend = " + this.form.customBackend);
             let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
             a ? this.$message.success(`${this.backendVersion}` + "默认后端利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success("当前后端版本号为："+`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换，请自行根据版本号检查是否为官方原版以及该后端是否支持vless/hysteria");
@@ -1378,8 +1378,8 @@ export default {
           });
       console.log("版本获取后customBackend = " + this.form.customBackend);
       if (flag === -1) {
-        // 如果flag为-1，将customBackend改回"https://psub.xyz233.cf"，并将flag重新设置为0
-        this.form.customBackend = "https://psub.xyz233.cf";
+        // 如果flag为-1，将customBackend改回"https://psub.chillg.top"，并将flag重新设置为0
+        this.form.customBackend = "https://psub.chillg.top";
         flag = 0;
       }
       console.log("flag归位后customBackend = " + this.form.customBackend);
