@@ -463,12 +463,8 @@ export default {
             label: "通用",
             options: [
               {
-                label: "自用（个性化太多不适合任何人！！请切换）",
+                label: "自用（包含大量定制内容，建议切换公版）",
                 value: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini"
-              },
-              {
-                label: "自用fakeip（完全自用 不适合任何人！！！请切换）",
-                value: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/FakeipRule.ini"
               },
               {
                 label: "默认（索尼电视专用）",
