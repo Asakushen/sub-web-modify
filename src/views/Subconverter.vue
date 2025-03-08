@@ -4,14 +4,6 @@
       <el-col>
         <el-card>
           <div slot="header">
-            <svg-icon class="gayhub" icon-class="github" style="float:left" @click="goToProject"/>
-            <svg-icon class="dianbao" icon-class="telegram" style="float:left;margin-left: 10px"
-                      @click="gotoTgChannel"/>
-            <svg-icon class="bilibili" icon-class="bilibili" style="float:right;margin-left:10px"
-                      @click="gotoBiliBili"/>
-            <svg-icon class="youguan" icon-class="youtube" style="float:right;margin-left:10px" @click="gotoYouTuBe"/>
-            <svg-icon class="channel" icon-class="telegram" style="float:right;margin-left: 10px"
-                      @click="gotoTgChannel"/>
             <div style="text-align:center;font-size:15px">订 阅 转 换</div>
           </div>
           <el-container>
@@ -474,8 +466,9 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
+          "浅草随机加密后端【vless reality+hy1+hy2】": "https://psub.waku.cf",
+          "⬇️⬇️以下均备用、无加密⬇️⬇️": "https://psub.waku.cf",
           "肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
-          "肥羊备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
           nameless13提供: "https://www.nameless13.com",
           subconverter作者提供: "https://sub.xeton.dev",
@@ -483,7 +476,7 @@ export default {
           "sub作者&lhie1提供": "https://api.dler.io",
         },
         backendOptions: [
-          {value: "https://url.v1.mk"},
+          {value: "https://psub.waku.cf"},
           {value: "https://sub.d1.mk"},
           {value: "https://api.tsutsu.one"},
           {value: "https://www.nameless13.com"},
@@ -495,6 +488,10 @@ export default {
           {
             label: "通用",
             options: [
+              {
+                label: "自用（包含大量定制内容，建议切换下方⬇️⬇️公版⬇️⬇️",
+                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
+              },
               {
                 label: "默认",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
@@ -889,9 +886,9 @@ export default {
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? "https://url.v1.mk" : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? "https://psub.waku.cf" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini",
+        remoteConfig: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
@@ -1046,7 +1043,7 @@ export default {
           });
     },
     gotoAdvancedVideo() {
-      this.$alert("别忘了关注友善的肥羊哦！", {
+      this.$alert("感谢您的使用", {
         type: "warning",
         confirmButtonText: '确定',
         customClass: 'msgbox',
