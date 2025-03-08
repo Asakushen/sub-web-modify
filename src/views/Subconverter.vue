@@ -1015,8 +1015,7 @@ tanchuang() {
     <strong><span style="font-size:20px;color:red">支持暗黑模式，完美兼容</span></strong></br>
     <strong><span style="font-size:20px;color:red">Clash / Quantumult X / Surge / Shadowrocket</span></strong></br></br>
 
-    <strong><span style="font-size:20px">立即体验：</span>
-    <span><a href="你的链接" target="_blank" style="color:red;font-size:20px;text-decoration:none">点击进入</a></span></strong>
+    <strong><span style="font-size:20px">By：Chill</span>
   </div>`, '信息面板', {
     confirmButtonText: '确定',
     dangerouslyUseHTMLString: true,
