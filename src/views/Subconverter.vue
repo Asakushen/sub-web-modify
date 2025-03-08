@@ -1403,7 +1403,7 @@ export default {
             let backendURL = this.form.customBackend;
             let a = backendURL.indexOf("url.v1.mk") !== -1 || backendURL.indexOf("sub.d1.mk") !== -1;
             let b = backendURL.indexOf("127.0.0.1") !== -1;
-            let c = backendURL.indexOf("waku.cf") !== -1;
+            let c = backendURL.indexOf("psub.waku.cf") !== -1 || backendURL.indexOf("psub2.waku.cf") !== -1;
             
             if (c) {
               this.$message.success(`${this.backendVersion} 浅草加密后端，请放心使用`);
