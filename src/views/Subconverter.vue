@@ -1392,6 +1392,12 @@ export default {
           })
     },
     getBackendVersion() {
+      let flag = 0;
+      if (this.form.customBackend === "https://psub.waku.cf") {
+    this.form.customBackend = "https://url.v1.mk";
+    flag = -1; // 如果customBackend被修改，将flag设置为-1
+    console.log("标志位改变后customBackend = " + this.form.customBackend);
+  }
       this.$axios
           .get(
               this.form.customBackend + "/version"
@@ -1399,25 +1405,21 @@ export default {
           .then(res => {
             this.backendVersion = res.data.replace(/backend\n$/gm, "");
             this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
-            
-            let backendURL = this.form.customBackend;
-            let a = backendURL.indexOf("url.v1.mk") !== -1 || backendURL.indexOf("sub.d1.mk") !== -1;
-            let b = backendURL.indexOf("127.0.0.1") !== -1;
-            let c = backendURL.indexOf("psub.waku.cf") !== -1 || backendURL.indexOf("psub2.waku.cf") !== -1;
-            
-            if (c) {
-              this.$message.success(`${this.backendVersion} 浅草加密后端，请放心使用`);
-            } else if (a) {
-              this.$message.success(`${this.backendVersion} 肥羊负载均衡增强版后端，已屏蔽免费节点池（会返回403），额外支持vless reality+hysteria+hysteria2订阅转换`);
-            } else if (b) {
-              this.$message.success(`${this.backendVersion} 本地局域网自建版后端`);
-            } else {
-              this.$message.success(`${this.backendVersion} 官方原版后端不支持vless/hysteria订阅转换`);
-            }
+            let a = this.form.customBackend.indexOf("https://psub.waku.cf") !== -1;
+            console.log("a后面的customBackend = " + this.form.customBackend);
+            let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
+            a ? this.$message.success(`${this.backendVersion}` + "默认后端利用CF Worker搭建的反代订阅转换工具，通过随机化服务器地址和节点账号密码，解决用户转换订阅的隐私问题") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success("当前后端版本号为："+`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换，请自行根据版本号检查是否为官方原版以及该后端是否支持vless/hysteria");
           })
           .catch(() => {
             this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
           });
+      console.log("版本获取后customBackend = " + this.form.customBackend);
+      if (flag === -1) {
+        // 如果flag为-1，将customBackend改回"https://psub.chillg.top"，并将flag重新设置为0
+        this.form.customBackend = "https://psub.waku.cf";
+        flag = 0;
+      }
+      console.log("flag归位后customBackend = " + this.form.customBackend);
     }
   }
 };
