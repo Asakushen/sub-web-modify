@@ -243,12 +243,18 @@
                 >从URL解析
                 </el-button>
               </el-form-item>
-              <el-form-item label-width="0px" style="text-align: center">
-                <el-button
-                    style="width: 250px;"
-                    type="success"
-                    icon="el-icon-video-play"
-                    @click="centerDialogVisible = true"
+            </el-form>
+          </el-container>
+        </el-card>
+      </el-col>
+    </el-row>
+    <el-dialog
+        :visible.sync="dialogUploadConfigVisible"
+        :show-close="false"
+        :close-on-click-modal="false"
+        :close-on-press-escape="false"
+        width="80%"
+    >
       <el-tabs v-model="activeName" type="card">
         <el-tab-pane label="远程配置上传" name="first">
           <el-link type="danger" :href="sampleConfig" style="margin-bottom: 15px" target="_blank" icon="el-icon-info">
