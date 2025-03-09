@@ -445,7 +445,7 @@ export default {
             options: [
               {
                 label: "自用（包含大量定制内容，建议切换下方⬇️⬇️公版⬇️⬇️",
-                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
+                value: "https://raw.githubusercontent.com/Asakushen/ClashRule/main/GeneralClashRule.ini"
               },
               {
                 label: "默认",
